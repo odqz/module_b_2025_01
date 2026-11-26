@@ -1,0 +1,10 @@
+order_id,customer_email,order_date,order_note
+1,1,2025-10-27,Sample order note
+2,1,2025-10-07,Another sample order
+3,1,2025-11-10,
+4,1,2025-11-16,
+5,1,2025-08-27,Bulk order
+6,1,2025-11-20,
+7,1,2025-10-22,
+8,1,2025-11-06,
+9,1,2025-10-12,
