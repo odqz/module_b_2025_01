@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('pic_locator', 50);
             $table->boolean('pic_is_active');
             $table->string('pic_path', 300);
-            $table->string('pic_note', 400)->nullable();
+            $table->string('note', 400)->nullable();
             $table->timestamps();
         });
     }

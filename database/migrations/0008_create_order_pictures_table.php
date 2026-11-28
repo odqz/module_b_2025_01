@@ -17,7 +17,7 @@ return new class extends Migration
             $table->foreignId('pic_id')->constrained('pictures', 'pic_id')->onDelete('cascade');
             $table->foreignId('pic_size_id')->constrained('picture_sizes', 'pic_size_id')->onDelete('cascade');
             $table->integer('pic_qty');
-            $table->string('order_note', 300);
+            $table->string('note', 300);
             $table->timestamps();
         });
     }

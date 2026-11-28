@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId('cust_id')->constrained('customers', 'cust_id')->onDelete('cascade');
             $table->date('order_date');
             $table->string('order_note', 250)->nullable();
-            $table->json('order_pictures');
+            $table->json('order_pictures')->nullable();
             $table->timestamps();
         });
     }
