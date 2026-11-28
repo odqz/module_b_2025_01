@@ -15,14 +15,9 @@ class OrderSeeder extends Seeder
     {
         $data = json_decode(file_get_contents(database_path('/data/orders.json')), true);
 
-        $data = array_map(function ($item) {
+        foreach ($data as &$item) {
             $item['order_pictures'] = json_encode($item['order_pictures']);
-
-            return array_merge($item, [
-                'created_at' => now(),
-                'updated_at' => now(),
-            ]);
-        }, $data);
+        }
 
         DB::table('orders')->insert($data);
     }

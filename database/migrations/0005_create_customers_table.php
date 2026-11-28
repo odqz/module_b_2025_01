@@ -20,7 +20,6 @@ return new class extends Migration
             $table->string('cust_addr2', 80)->nullable();
             $table->string('cust_postcode', 50);
             $table->string('cust_email', 70);
-            $table->timestamps();
         });
     }
 

@@ -18,7 +18,6 @@ return new class extends Migration
             $table->foreignId('pic_size_id')->constrained('picture_sizes', 'pic_size_id')->onDelete('cascade');
             $table->integer('pic_qty');
             $table->string('note', 300);
-            $table->timestamps();
         });
     }
 

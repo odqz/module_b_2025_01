@@ -14,18 +14,7 @@ class PicturesSeeder extends Seeder
     public function run(): void
     {
         $data = json_decode(file_get_contents(database_path('/data/pictures.json')), true);
-
-        $data = array_map(function ($item) {
-            return array_merge(
-                $item, 
-                [
-                    'note' => $item["note"] ?? null,
-                    'created_at' => now(),
-                    'updated_at' => now(),
-                ],
-                
-            );
-        }, $data);
+        $data = array_map(fn($item) => $item + ['note' => null], $data);
 
         DB::table('pictures')->insert($data);
     }

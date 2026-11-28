@@ -19,7 +19,6 @@ return new class extends Migration
             $table->boolean('pic_is_active');
             $table->string('pic_path', 300);
             $table->string('note', 400)->nullable();
-            $table->timestamps();
         });
     }
 

@@ -17,7 +17,6 @@ return new class extends Migration
             $table->date('order_date');
             $table->string('order_note', 250)->nullable();
             $table->json('order_pictures')->nullable();
-            $table->timestamps();
         });
     }
 

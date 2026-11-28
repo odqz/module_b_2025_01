@@ -15,13 +15,6 @@ class CategorySeeder extends Seeder
     {
         $data = json_decode(file_get_contents(database_path('/data/categories.json')), true);
 
-        $data = array_map(function ($item) {
-            return array_merge($item, [
-                'created_at' => now(),
-                'updated_at' => now(),
-            ]);
-        }, $data);
-
         DB::table('categories')->insert($data);
     }
 }

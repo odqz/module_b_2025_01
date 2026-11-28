@@ -17,7 +17,6 @@ return new class extends Migration
             $table->integer('pic_size_width');
             $table->integer('pic_size_height');
             $table->decimal('pic_size_price', 10, 2)->default(0.00);
-            $table->timestamps();
         });
     }
 

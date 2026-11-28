@@ -20,7 +20,6 @@ return new class extends Migration
             $table->date('event_date');
             $table->time('event_time');
             $table->string('event_note', 300)->nullable();
-            $table->timestamps();
         });
     }
 
